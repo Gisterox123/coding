@@ -1,0 +1,17 @@
+#配置服务器端口号
+server:
+  port: 7001
+
+#  配置工程名称
+spring:
+  application:
+    name: 001-springcloud-eureka-client-provider
+eureka:
+  client:
+    service-url:
+      # 配置注册中心的地址
+      defaultZone: http://localhost:6001/eureka
+    #      注册中心只提供注册发现功能，不需要拉去服务列表
+    fetch-registry: true
+    # 不向注册中心注册服务
+    register-with-eureka: true
